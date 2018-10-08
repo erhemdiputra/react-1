@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>Beginner's Guide to React</title>
+	<meta charset="UTF-8" />
+</head>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@16.0.0-rc.3/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.0.0-rc.3/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+    <script type="text/babel">
+        function Message({message}) {
+            return (
+                <div>
+                    {
+                        message
+                        ? ( <div>{message}</div> )
+                        : ( <div>No Message</div> )
+                    }
+                </div>
+            )
+        }
+        ReactDOM.render(
+            <Message message={'Hi there'} />,
+            document.getElementById('root')
+        )
+    </script>
+</body>
+
+</html>

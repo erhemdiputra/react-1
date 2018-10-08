@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>Beginner's Guide to React</title>
+    <meta charset="UTF-8" />
+</head>
+<div id="root"></div>
+<script src="https://unpkg.com/react@16.0.0-rc.3/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@16.0.0-rc.3/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+<script type="text/babel">
+    const rootElement = document.getElementById('root')
+        const Message1 = props => <div>{props.msg}</div>
+        const Message2 = props => <div>{props.children}</div>
+        const element = (
+            <div className="container">
+                <Message1 msg="Hello World"/>
+                <Message1 msg="Goodbye World"/>
+                <Message2>
+                    Hello World
+                    <Message2>Goodbye World</Message2>
+                </Message2>
+            </div>
+        )
+        ReactDOM.render(element, rootElement)
+    </script>
+</body>
+
+</html>
